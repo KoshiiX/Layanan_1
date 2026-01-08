@@ -19,13 +19,13 @@ import {
 } from 'lucide-react';
 
 const services = [
-  { id: 'ktp', name: 'KTP', icon: FileText, color: 'bg-blue-500' },
-  { id: 'kk', name: 'Kartu Keluarga', icon: Home, color: 'bg-green-500' },
-  { id: 'akta', name: 'Akta Kelahiran', icon: UserCircle, color: 'bg-purple-500' },
-  { id: 'skck', name: 'SKCK', icon: Mail, color: 'bg-yellow-500' },
-  { id: 'domisili', name: 'Surat Domisili', icon: Building, color: 'bg-red-500' },
-  { id: 'usaha', name: 'Surat Usaha', icon: Briefcase, color: 'bg-indigo-500' },
-  { id: 'kendaraan', name: 'Surat Kendaraan', icon: Car, color: 'bg-orange-500' },
+  { id: 'Legalisasi Umum', name: 'Legalisasi Umum', icon: FileText, color: 'bg-blue-500' },
+  { id: 'Pengantar Nikah, Talak, Cerai, Rujuk', name: 'Pengantar Nikah, Talak, Cerai, Rujuk', icon: Home, color: 'bg-green-500' },
+  { id: 'Fasilitas Besok Kiamat', name: 'Fasilitas Besok Kiamat', icon: UserCircle, color: 'bg-purple-500' },
+  { id: 'Pernyataan Ahli Waris', name: 'Pernyataan Ahli Waris', icon: Mail, color: 'bg-yellow-500' },
+  { id: 'Prakerin Mahasiswa', name: 'Prakerin Mahasiswa', icon: Building, color: 'bg-red-500' },
+  { id: 'Layanan Kelahiran', name: 'Layanan Kelahiran', icon: Briefcase, color: 'bg-indigo-500' },
+  { id: 'Pendaftaran Administrasi Kependudukan', name: 'Pendaftaran Administrasi Kependudukan', icon: Car, color: 'bg-orange-500' },
   { id: 'lainnya', name: 'Lainnya', icon: HelpCircle, color: 'bg-pink-500' }
 ];
 

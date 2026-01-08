@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum StatusPengajuan {
+  DIAJUKAN
+  DIPROSES
+  DITOLAK
+  SELESAI
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  name      String
+  nik       String     @unique
+  email     String?    @unique
+  password  String
+
+  pengajuan Pengajuan[]
+
+  createdAt DateTime   @default(now())
+}
+
+model Layanan {
+  id        Int        @id @default(autoincrement())
+  name      String
+  deskripsi String?
+
+  pengajuan Pengajuan[]
+
+  createdAt DateTime   @default(now())
+}
+
+model Pengajuan {
+  id          Int             @id @default(autoincrement())
+  userId      Int
+  layananId   Int
+
+  documentPdf String          // path ke 1 file PDF gabungan
+  status      StatusPengajuan @default(DIAJUKAN)
+
+  user        User            @relation(fields: [userId], references: [id])
+  layanan     Layanan         @relation(fields: [layananId], references: [id])
+
+  createdAt   DateTime        @default(now())
+}
